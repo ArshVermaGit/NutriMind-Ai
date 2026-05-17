@@ -6,7 +6,7 @@ import { useGlobalState } from '../context/GlobalContext';
 const WORKOUT_PLANS = {
   gym: {
     title: 'Hypertrophy Split',
-    subtitle: '4-Day Push / Pull / Legs + Full Body',
+    subtitle: '7-Day Push / Pull / Legs Split',
     days: [
       {
         day: 'Day 1 — Push (Chest, Shoulders, Triceps)',
@@ -47,13 +47,41 @@ const WORKOUT_PLANS = {
           { name: 'Plank', sets: 3, reps: '60s hold', rest: '45s', muscles: 'Core' },
           { name: 'Ab Wheel Rollout', sets: 3, reps: '10-12', rest: '45s', muscles: 'Abs' },
         ]
+      },
+      {
+        day: 'Day 5 — Push (Volume & Endurance)',
+        exercises: [
+          { name: 'Dumbbell Flat Press', sets: 4, reps: '10-12', rest: '60s', muscles: 'Chest' },
+          { name: 'Arnold Press', sets: 3, reps: '10-12', rest: '60s', muscles: 'Shoulders' },
+          { name: 'Cable Flyes', sets: 3, reps: '12-15', rest: '45s', muscles: 'Chest' },
+          { name: 'Front Raises', sets: 3, reps: '12-15', rest: '45s', muscles: 'Front Delts' },
+          { name: 'Overhead Tricep Extension', sets: 3, reps: '12-15', rest: '45s', muscles: 'Triceps' },
+        ]
+      },
+      {
+        day: 'Day 6 — Pull (Width & Rear Delts)',
+        exercises: [
+          { name: 'Wide-Grip Pull-Ups', sets: 4, reps: '8-10', rest: '90s', muscles: 'Lats' },
+          { name: 'Seated Cable Row (V-Grip)', sets: 3, reps: '10-12', rest: '60s', muscles: 'Mid Back' },
+          { name: 'Reverse Pec Deck Flyes', sets: 3, reps: '12-15', rest: '45s', muscles: 'Rear Delts' },
+          { name: 'Hammer Curls', sets: 3, reps: '10-12', rest: '60s', muscles: 'Biceps / Brachialis' },
+          { name: 'Shrugs (Dumbbell or Barbell)', sets: 3, reps: '12-15', rest: '45s', muscles: 'Traps' },
+        ]
+      },
+      {
+        day: 'Day 7 — Active Recovery & Mobility',
+        exercises: [
+          { name: 'Light Jog or Cycle', sets: 1, reps: '20 min', rest: '—', muscles: 'Cardio' },
+          { name: 'Full Body Stretching Flow', sets: 1, reps: '15 min', rest: '—', muscles: 'Full Body' },
+          { name: 'Foam Rolling (Quads, Back, Chest)', sets: 1, reps: '10 min', rest: '—', muscles: 'Recovery' },
+        ]
       }
     ],
     nutrition: ['Eat 1g protein per lb of bodyweight', 'Caloric surplus of 200-300 kcal', 'Creatine 5g/day', 'Pre-workout meal 90 min before training']
   },
   diabetes: {
     title: 'Diabetic-Friendly Fitness Plan',
-    subtitle: 'Low Impact + Glucose Management',
+    subtitle: '7-Day Glucose Management Plan',
     days: [
       {
         day: 'Day 1 — Low Impact Cardio',
@@ -81,13 +109,49 @@ const WORKOUT_PLANS = {
           { name: 'Child\'s Pose', sets: 1, reps: '60s hold', rest: '—', muscles: 'Back / Hips' },
           { name: 'Savasana (relaxation)', sets: 1, reps: '5 min', rest: '—', muscles: 'Recovery' },
         ]
+      },
+      {
+        day: 'Day 4 — Brisk Walking + Light Strength',
+        exercises: [
+          { name: '20-min brisk walk', sets: 1, reps: '20 min', rest: '—', muscles: 'Cardio / Legs' },
+          { name: 'Chair Stands', sets: 3, reps: '12', rest: '45s', muscles: 'Legs / Glutes' },
+          { name: 'Standing Calf Raises', sets: 2, reps: '15', rest: '30s', muscles: 'Calves' },
+          { name: 'Seated Band Row', sets: 2, reps: '12', rest: '45s', muscles: 'Back' },
+        ]
+      },
+      {
+        day: 'Day 5 — Resistance Band Upper Body',
+        exercises: [
+          { name: 'Band Overhead Press', sets: 3, reps: '12', rest: '45s', muscles: 'Shoulders' },
+          { name: 'Band Bicep Curl', sets: 2, reps: '12', rest: '30s', muscles: 'Biceps' },
+          { name: 'Band Tricep Pushdown', sets: 2, reps: '12', rest: '30s', muscles: 'Triceps' },
+          { name: 'Band Lateral Raise', sets: 2, reps: '12', rest: '30s', muscles: 'Deltoids' },
+        ]
+      },
+      {
+        day: 'Day 6 — Tai Chi / Balance & Stability',
+        exercises: [
+          { name: 'Tai Chi Slow Flow (forward/back weight shift)', sets: 1, reps: '10 min', rest: '—', muscles: 'Balance / Legs' },
+          { name: 'Single Leg Stand (hold support)', sets: 2, reps: '30s each', rest: '30s', muscles: 'Balance / Ankles' },
+          { name: 'Heel-to-Toe Walk', sets: 2, reps: '10 steps each', rest: '—', muscles: 'Balance / Coordination' },
+          { name: 'Deep Breathing with Movement', sets: 1, reps: '5 min', rest: '—', muscles: 'Stress Reduction' },
+        ]
+      },
+      {
+        day: 'Day 7 — Active Recovery & Stretching',
+        exercises: [
+          { name: '15-min leisurely walk', sets: 1, reps: '15 min', rest: '—', muscles: 'Whole Body' },
+          { name: 'Hamstring Stretch', sets: 2, reps: '30s each', rest: '—', muscles: 'Hamstrings' },
+          { name: 'Quad Stretch', sets: 2, reps: '30s each', rest: '—', muscles: 'Quads' },
+          { name: 'Seated Spinal Twist', sets: 1, reps: '30s each', rest: '—', muscles: 'Spine / Back' },
+        ]
       }
     ],
     nutrition: ['Walk 15 min after every meal', 'Check blood sugar before/after exercise', 'Carry fast glucose (juice/dextrose tabs) while training', 'Prefer low-GI pre-workout snacks (apple + nut butter)']
   },
   weight_loss: {
     title: 'Fat-Loss & HIIT Program',
-    subtitle: '5-Day Calorie-Burning Protocol',
+    subtitle: '7-Day Fat-Burning & HIIT Program',
     days: [
       {
         day: 'Day 1 — HIIT Circuit',
@@ -115,16 +179,52 @@ const WORKOUT_PLANS = {
           { name: 'Pigeon Pose', sets: 1, reps: '60s each', rest: '—', muscles: 'Hips' },
           { name: 'Foam Rolling', sets: 1, reps: '10 min', rest: '—', muscles: 'Recovery' },
         ]
+      },
+      {
+        day: 'Day 4 — HIIT Cardio (Bodyweight)',
+        exercises: [
+          { name: 'Butt Kicks', sets: 3, reps: '45s on / 15s off', rest: '—', muscles: 'Hamstrings / Cardio' },
+          { name: 'Plank Jacks', sets: 3, reps: '30s on / 30s off', rest: '—', muscles: 'Core / Cardio' },
+          { name: 'Box Jumps (low box)', sets: 3, reps: '30s on / 30s off', rest: '—', muscles: 'Legs / Explosive' },
+          { name: 'Skater Hops', sets: 3, reps: '30s on / 30s off', rest: '—', muscles: 'Legs / Lateral' },
+        ]
+      },
+      {
+        day: 'Day 5 — Full Body Strength',
+        exercises: [
+          { name: 'Dumbbell Squat to Press', sets: 4, reps: '12', rest: '60s', muscles: 'Legs / Shoulders' },
+          { name: 'Dumbbell Romanian Deadlift', sets: 3, reps: '12', rest: '60s', muscles: 'Hamstrings / Glutes' },
+          { name: 'Dumbbell Bench Press', sets: 3, reps: '10-12', rest: '60s', muscles: 'Chest' },
+          { name: 'Renegade Rows', sets: 3, reps: '8 each', rest: '45s', muscles: 'Back / Core' },
+          { name: 'Bicycle Crunches', sets: 3, reps: '20 total', rest: '30s', muscles: 'Abs' },
+        ]
+      },
+      {
+        day: 'Day 6 — LISS Cardio + Core',
+        exercises: [
+          { name: 'Incline Walk (treadmill or outdoors)', sets: 1, reps: '35 min', rest: '—', muscles: 'Cardio / Legs' },
+          { name: 'Reverse Crunches', sets: 3, reps: '15', rest: '30s', muscles: 'Lower Abs' },
+          { name: 'Russian Twists', sets: 3, reps: '20 total', rest: '30s', muscles: 'Obliques' },
+          { name: 'Dead Bug', sets: 2, reps: '10 each', rest: '30s', muscles: 'Core' },
+        ]
+      },
+      {
+        day: 'Day 7 — Active Recovery & Walking',
+        exercises: [
+          { name: '30-min leisurely walk', sets: 1, reps: '30 min', rest: '—', muscles: 'Whole Body' },
+          { name: 'Full Body Stretching', sets: 1, reps: '15 min', rest: '—', muscles: 'Flexibility' },
+          { name: 'Chest & Hip Openers', sets: 1, reps: '5 min', rest: '—', muscles: 'Mobility' },
+        ]
       }
     ],
     nutrition: ['Maintain calorie deficit (300-500 kcal below TDEE)', 'High protein to preserve muscle (1.6g/kg)', 'Drink water before meals to reduce hunger', 'Avoid liquid calories']
   },
   heart: {
     title: 'Cardiac Health Protocol',
-    subtitle: 'Zone 2 Cardio + Light Strength',
+    subtitle: '7-Day Heart-Healthy Protocol',
     days: [
       {
-        day: 'Day 1 — Zone 2 Walk/Cycle',
+        day: 'Day 1 — Zone 2 Cardio',
         exercises: [
           { name: 'Brisk Walk / Stationary Bike', sets: 1, reps: '30-40 min at 60-70% max HR', rest: '—', muscles: 'Heart / Legs' },
           { name: 'Gentle Neck Rolls', sets: 1, reps: '10 each', rest: '—', muscles: 'Neck' },
@@ -132,12 +232,55 @@ const WORKOUT_PLANS = {
         ]
       },
       {
-        day: 'Day 2 — Light Strength',
+        day: 'Day 2 — Light Strength (Lower Body)',
         exercises: [
           { name: 'Chair Squats (bodyweight)', sets: 3, reps: '12', rest: '60s', muscles: 'Legs' },
           { name: 'Wall Push-Ups', sets: 2, reps: '10-12', rest: '60s', muscles: 'Chest / Arms' },
           { name: 'Seated Band Row', sets: 2, reps: '12', rest: '60s', muscles: 'Back' },
           { name: 'Standing Calf Raises', sets: 2, reps: '15', rest: '30s', muscles: 'Calves' },
+        ]
+      },
+      {
+        day: 'Day 3 — Zone 2 Cardio + Stretch',
+        exercises: [
+          { name: 'Brisk Walk / Elliptical', sets: 1, reps: '30 min at 60-70% max HR', rest: '—', muscles: 'Heart / Legs' },
+          { name: 'Standing Quad Stretch', sets: 2, reps: '30s each', rest: '—', muscles: 'Quads' },
+          { name: 'Chest Opener Stretch', sets: 2, reps: '30s', rest: '—', muscles: 'Chest / Shoulders' },
+          { name: 'Seated Forward Fold', sets: 1, reps: '60s', rest: '—', muscles: 'Hamstrings / Back' },
+        ]
+      },
+      {
+        day: 'Day 4 — Light Strength (Upper Body)',
+        exercises: [
+          { name: 'Wall Push-Ups', sets: 3, reps: '12', rest: '60s', muscles: 'Chest / Arms' },
+          { name: 'Seated Band Overhead Press', sets: 2, reps: '12', rest: '60s', muscles: 'Shoulders' },
+          { name: 'Standing Band Curl', sets: 2, reps: '12', rest: '45s', muscles: 'Biceps' },
+          { name: 'Band Tricep Extension', sets: 2, reps: '12', rest: '45s', muscles: 'Triceps' },
+        ]
+      },
+      {
+        day: 'Day 5 — Zone 2 Walk + Breathing',
+        exercises: [
+          { name: 'Brisk Walk (outdoors or treadmill)', sets: 1, reps: '35-40 min at 60-70% max HR', rest: '—', muscles: 'Heart / Legs' },
+          { name: 'Pursed-Lip Breathing', sets: 1, reps: '3 min', rest: '—', muscles: 'Respiratory / Calming' },
+          { name: 'Shoulder Rolls & Neck Stretch', sets: 1, reps: '5 min', rest: '—', muscles: 'Upper Body Relaxation' },
+        ]
+      },
+      {
+        day: 'Day 6 — Light Full Body / Chair Exercises',
+        exercises: [
+          { name: 'Seated Marches', sets: 3, reps: '15 each', rest: '45s', muscles: 'Hip Flexors / Legs' },
+          { name: 'Chair Yoga Twists', sets: 2, reps: '30s each', rest: '—', muscles: 'Spine / Core' },
+          { name: 'Standing Heel Raises', sets: 3, reps: '15', rest: '30s', muscles: 'Calves' },
+          { name: 'Seated Band Chest Press', sets: 2, reps: '12', rest: '60s', muscles: 'Chest' },
+        ]
+      },
+      {
+        day: 'Day 7 — Active Recovery & Walking',
+        exercises: [
+          { name: '20-min gentle walk', sets: 1, reps: '20 min', rest: '—', muscles: 'Whole Body' },
+          { name: 'Full Body Gentle Stretching', sets: 1, reps: '15 min', rest: '—', muscles: 'Flexibility' },
+          { name: 'Body Scan Meditation', sets: 1, reps: '5 min', rest: '—', muscles: 'Stress Reduction' },
         ]
       }
     ],
@@ -145,7 +288,7 @@ const WORKOUT_PLANS = {
   },
   general: {
     title: 'General Wellness Plan',
-    subtitle: 'Balanced Fitness for Everyone',
+    subtitle: '7-Day Balanced Fitness Plan',
     days: [
       {
         day: 'Day 1 — Full Body',
@@ -162,6 +305,50 @@ const WORKOUT_PLANS = {
           { name: '20-min brisk walk or jog', sets: 1, reps: '20 min', rest: '—', muscles: 'Cardio' },
           { name: 'Hip flexor stretch', sets: 2, reps: '30s each', rest: '—', muscles: 'Hips' },
           { name: 'Shoulder rolls', sets: 2, reps: '10', rest: '—', muscles: 'Shoulders' },
+        ]
+      },
+      {
+        day: 'Day 3 — Core & Stability',
+        exercises: [
+          { name: 'Dead Bug', sets: 3, reps: '10 each', rest: '30s', muscles: 'Deep Core' },
+          { name: 'Glute Bridge', sets: 3, reps: '15', rest: '45s', muscles: 'Glutes / Core' },
+          { name: 'Side Plank', sets: 2, reps: '30s each', rest: '30s', muscles: 'Obliques' },
+          { name: 'Bird Dog', sets: 3, reps: '8 each', rest: '30s', muscles: 'Core / Balance' },
+        ]
+      },
+      {
+        day: 'Day 4 — Upper Body Strength',
+        exercises: [
+          { name: 'Dumbbell Overhead Press', sets: 3, reps: '10-12', rest: '60s', muscles: 'Shoulders' },
+          { name: 'Dumbbell Row', sets: 3, reps: '10 each', rest: '60s', muscles: 'Back' },
+          { name: 'Dumbbell Curl', sets: 2, reps: '12', rest: '45s', muscles: 'Biceps' },
+          { name: 'Tricep Dips (chair)', sets: 2, reps: '10-12', rest: '45s', muscles: 'Triceps' },
+        ]
+      },
+      {
+        day: 'Day 5 — Cardio + HIIT',
+        exercises: [
+          { name: 'Jumping Jacks', sets: 3, reps: '45s on / 15s off', rest: '—', muscles: 'Full Body Cardio' },
+          { name: 'High Knees', sets: 3, reps: '45s on / 15s off', rest: '—', muscles: 'Cardio / Legs' },
+          { name: 'Mountain Climbers', sets: 3, reps: '40s on / 20s off', rest: '—', muscles: 'Core / Cardio' },
+          { name: '10-min steady jog', sets: 1, reps: '10 min', rest: '—', muscles: 'Cardio' },
+        ]
+      },
+      {
+        day: 'Day 6 — Yoga & Mobility',
+        exercises: [
+          { name: 'Cat-Cow Stretch', sets: 1, reps: '10 each way', rest: '—', muscles: 'Spine' },
+          { name: 'Downward Dog', sets: 1, reps: '60s', rest: '—', muscles: 'Full Body' },
+          { name: 'Pigeon Pose', sets: 1, reps: '60s each', rest: '—', muscles: 'Hips' },
+          { name: 'Child\'s Pose', sets: 1, reps: '60s', rest: '—', muscles: 'Back / Hips' },
+        ]
+      },
+      {
+        day: 'Day 7 — Active Recovery & Walk',
+        exercises: [
+          { name: '30-min leisurely walk', sets: 1, reps: '30 min', rest: '—', muscles: 'Whole Body' },
+          { name: 'Full Body Stretching', sets: 1, reps: '15 min', rest: '—', muscles: 'Flexibility' },
+          { name: 'Foam Rolling (optional)', sets: 1, reps: '10 min', rest: '—', muscles: 'Recovery' },
         ]
       }
     ],
