@@ -30,7 +30,7 @@ const LoginPage = () => {
         navigate(data.profileComplete ? '/' : '/setup-profile');
       }
     } catch {
-      setError('Connection error. Is the server running?');
+      setError('Unable to sign in. Please check your network and try again.');
     }
     setLoading(false);
   };
